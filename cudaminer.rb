@@ -1,6 +1,6 @@
 require 'formula'
 
-class CudaMiner < Formula
+class Cudainer < Formula
   homepage 'https://github.com/cbuchner1/CudaMiner'
   head 'https://github.com/cbuchner1/CudaMiner', :branch => 'master'
   
