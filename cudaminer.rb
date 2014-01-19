@@ -5,11 +5,16 @@ class CudaMiner < Formula
   head 'https://github.com/cbuchner1/CudaMiner', :branch => 'master'
   
   depends_on 'Gcc49' => :build
+  
+  def patches
+    # allows cudaminer to be compiled on OS X (missing headers and variables)
+    [
+      "https://github.com/k2b6s9j/CudaMiner/commit/8a391a4d94f1ba2e892f14018d67e5e4a0dc00a4.patch",
+      "https://github.com/k2b6s9j/CudaMiner/commit/60c22c4fa15c4e0bc2f60386f80423463912515d.patch"
+    ]
+  end
 
   def install
-    sed -i '46 s|#include <malloc.h>|#include <malloc/malloc.h>|' scrypt.cpp
-    sed -i '146 s|CUDA_LDFLAGS="-L$with_cuda/lib$SUFFIX"|CUDA_LDFLAGS="-L$with_cuda/lib"|' scrypt.cpp
-    sed -i '151 s|CUDA_LDFLAGS="-L/usr/local/cuda/lib$SUFFIX"|CUDA_LDFLAGS="-L/usr/local/cuda/lib|' scrypt.cpp
     system "./autogen.sh"
     system "./configure.sh"
   end
