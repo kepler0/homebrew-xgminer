@@ -3,6 +3,8 @@ require 'formula'
 class CudaMiner < Formula
   homepage 'https://github.com/cbuchner1/CudaMiner'
   head 'https://github.com/cbuchner1/CudaMiner', :branch => 'master'
+  
+  depends_on 'Gcc49' => :build
 
   def install
     sed -i '46 s|#include <malloc.h>|#include <malloc/malloc.h>|' scrypt.cpp
