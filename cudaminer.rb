@@ -10,6 +10,8 @@ class CudaMiner < Formula
     sed -i '46 s|#include <malloc.h>|#include <malloc/malloc.h>|' scrypt.cpp
     sed -i '146 s|CUDA_LDFLAGS="-L$with_cuda/lib$SUFFIX"|CUDA_LDFLAGS="-L$with_cuda/lib"|' scrypt.cpp
     sed -i '151 s|CUDA_LDFLAGS="-L/usr/local/cuda/lib$SUFFIX"|CUDA_LDFLAGS="-L/usr/local/cuda/lib|' scrypt.cpp
+    system "./autogen.sh"
+    system "./configure.sh"
   end
 
   test do
