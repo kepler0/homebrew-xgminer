@@ -7,7 +7,7 @@ class Cudaminer < Formula
   sha1 'e9dda44764ad3791931903721599493db6614e4d'
   version '12/18/13'
   
-  depends_on 'homebrew/versions/gcc49' => :build
+  depends_on 'gcc49' => :build
   
   def patches
     # allows cudaminer to be compiled on OS X (missing headers and variables)
