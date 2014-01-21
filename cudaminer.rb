@@ -4,7 +4,7 @@ class Cudaminer < Formula
   homepage 'https://github.com/cbuchner1/CudaMiner'
   head 'https://github.com/cbuchner1/CudaMiner', :branch => 'master'
   url 'https://github.com/cbuchner1/CudaMiner/archive/e9dda44764ad3791931903721599493db6614e4d.zip'
-  sha1 'e9dda44764ad3791931903721599493db6614e4d'
+  sha1 '58614ddcb69becb2d137ef2fa4172b620876cb17'
   version '12/18/13'
   
   depends_on 'gcc49' => :build
