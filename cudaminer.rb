@@ -20,8 +20,8 @@ class Cudaminer < Formula
   end
 
   def install
-    system "./autogen.sh"
-    system "./configure.sh"
+    system "sh", "autogen.sh"
+    system "sh", "configure.sh"
     system "make"
   end
 
