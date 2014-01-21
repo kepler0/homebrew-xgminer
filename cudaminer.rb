@@ -7,6 +7,8 @@ class Cudaminer < Formula
   sha1 '58614ddcb69becb2d137ef2fa4172b620876cb17'
   version '12.18.13'
   
+  depends_on 'autoconf' => :build
+  depends_on 'automake' => :build
   depends_on 'gcc49' => :build
   
   def patches
@@ -20,6 +22,7 @@ class Cudaminer < Formula
   def install
     system "./autogen.sh"
     system "./configure.sh"
+    system "make"
   end
 
   test do
