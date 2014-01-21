@@ -3,8 +3,8 @@ require 'formula'
 class Cudainer < Formula
   homepage 'https://github.com/cbuchner1/CudaMiner'
   head 'https://github.com/cbuchner1/CudaMiner', :branch => 'master'
-  url 'https://github.com/cbuchner1/CudaMiner/archive/e9dda44764ad3791931903721599493db6614e4d.zip'
-  sha1 'e9dda44764ad3791931903721599493db6614e4d'
+  # url 'https://github.com/cbuchner1/CudaMiner/archive/e9dda44764ad3791931903721599493db6614e4d.zip'
+  # sha1 'e9dda44764ad3791931903721599493db6614e4d'
   
   depends_on 'Gcc49' => :build
   
