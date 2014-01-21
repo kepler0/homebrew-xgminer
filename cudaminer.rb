@@ -9,6 +9,7 @@ class Cudaminer < Formula
   
   depends_on 'autoconf' => :build
   depends_on 'automake' => :build
+  depends_on 'pkg-config' => :build
   depends_on 'gcc49' => :build
   
   def patches
