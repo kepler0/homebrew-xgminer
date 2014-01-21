@@ -17,7 +17,8 @@ class Cudaminer < Formula
     # allows cudaminer to be compiled on OS X (missing headers and variables)
     [
       "https://github.com/k2b6s9j/CudaMiner/commit/8a391a4d94f1ba2e892f14018d67e5e4a0dc00a4.patch",
-      "https://github.com/k2b6s9j/CudaMiner/commit/60c22c4fa15c4e0bc2f60386f80423463912515d.patch"
+      "https://github.com/k2b6s9j/CudaMiner/commit/60c22c4fa15c4e0bc2f60386f80423463912515d.patch",
+      "https://github.com/k2b6s9j/CudaMiner/commit/c689f3061f60c9a8887bfa33f9cc96ed51156fe9.patch"
     ]
   end
 
